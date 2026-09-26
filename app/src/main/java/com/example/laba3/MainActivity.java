@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
+import android.net.Uri;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -55,6 +56,17 @@ public class MainActivity extends AppCompatActivity {
 
         btnLab2.setOnClickListener(v -> {
             startActivity(new Intent(MainActivity.this, laba2.class));
+        });
+
+        btnPhone.setOnClickListener(v -> {
+            String phone = etPhone.getText().toString().trim();
+            if (phone.isEmpty()) {
+                etPhone.setError("Введите телефон!!!");
+                return;
+            }
+            Intent intent = new Intent(Intent.ACTION_DIAL);
+            intent.setData(Uri.parse("tel:" + phone));
+            startActivity(intent);
         });
     }
 }
