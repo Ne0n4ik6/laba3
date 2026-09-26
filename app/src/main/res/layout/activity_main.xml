@@ -91,7 +91,19 @@
                 android:layout_weight="1"
                 android:inputType="phone"/>
         </LinearLayout>
+        <Button
+            android:id="@+id/btnLab2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Лаба 2"/>
 
+        <Button
+            android:id="@+id/btnPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Позвонить"/>
         <Button
             android:id="@+id/btnLogin"
             android:layout_width="match_parent"

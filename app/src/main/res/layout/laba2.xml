@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/firstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Фамилия"
+        android:textSize="20sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/firstNameEdit" />
+
+    <EditText
+        android:id="@+id/firstNameEdit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Введите фамилию..."
+        android:inputType="textPersonName"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toEndOf="@id/firstName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/secondName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Имя"
+        android:textSize="20sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/firstNameEdit"
+        app:layout_constraintBottom_toBottomOf="@id/secondNameEdit" />
+
+    <EditText
+        android:id="@+id/secondNameEdit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Введите имя..."
+        android:inputType="textPersonName"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toEndOf="@id/secondName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/firstNameEdit" />
+
+    <TextView
+        android:id="@+id/thirdName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Отчество"
+        android:textSize="20sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/secondNameEdit"
+        app:layout_constraintBottom_toBottomOf="@id/thirdNameEdit" />
+
+    <EditText
+        android:id="@+id/thirdNameEdit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Введите отчество..."
+        android:inputType="textPersonName"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toEndOf="@id/thirdName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/secondNameEdit" />
+
+    <Button
+        android:id="@+id/regButton"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:text="Зарегистрировать"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/thirdNameEdit" />
+
+    <TextView
+        android:id="@+id/listText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Список участников"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/regButton" />
+
+    <ScrollView
+        android:id="@+id/result"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/listText"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/resultLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
         EditText etAge = findViewById(R.id.etAge);
         EditText etPhone = findViewById(R.id.etPhone);
         Button btnLogin = findViewById(R.id.btnLogin);
+        Button btnLab2 = findViewById(R.id.btnLab2);
+        Button btnPhone = findViewById(R.id.btnPhone);
         StudentData data = StudentData.getInstance();
         etFullName.setText(data.name);
         etClassName.setText(data.className);
@@ -49,6 +51,10 @@ public class MainActivity extends AppCompatActivity {
             if (!hasError) {
                 startActivity(new Intent(MainActivity.this, Screen2Activity.class));
             }
+        });
+
+        btnLab2.setOnClickListener(v -> {
+            startActivity(new Intent(MainActivity.this, laba2.class));
         });
     }
 }
