@@ -16,8 +16,7 @@ public class Screen1Fragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_screen1, container, false);
-
+        View view = inflater.inflate(R.layout.fragment_main, container, false);
         EditText etFullName = view.findViewById(R.id.etFullName);
         EditText etClassName = view.findViewById(R.id.etClass);
         EditText etAge = view.findViewById(R.id.etAge);

@@ -9,7 +9,7 @@
         android:id="@+id/screen1Fragment"
         android:name="com.example.laba3.Screen1Fragment"
         android:label="Регистрация"
-        tools:layout="@layout/fragment_screen1">
+        tools:layout="@layout/fragment_main">
 
         <action
             android:id="@+id/action_screen1_to_screen2"
