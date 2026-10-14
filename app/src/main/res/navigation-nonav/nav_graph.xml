@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/screen1Fragment">
+
+    <fragment
+        android:id="@+id/screen1Fragment"
+        android:name="com.example.laba3.Screen1Fragment"
+        android:label="Регистрация"
+        tools:layout="@layout/fragment_screen1">
+
+        <action
+            android:id="@+id/action_screen1_to_screen2"
+            app:destination="@id/screen2Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/screen2Fragment"
+        android:name="com.example.laba3.Screen2Fragment"
+        android:label="Профиль"
+        tools:layout="@layout/fragment_screen2">
+
+        <argument android:name="fullName" app:argType="string" />
+        <argument android:name="className" app:argType="string" />
+        <argument android:name="age" app:argType="string" />
+        <argument android:name="phone" app:argType="string" />
+
+        <action
+            android:id="@+id/action_screen2_to_screen3"
+            app:destination="@id/screen3Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/screen3Fragment"
+        android:name="com.example.laba3.Screen3Fragment"
+        android:label="Выбор секций"
+        tools:layout="@layout/fragment_screen3">
+
+        <action
+            android:id="@+id/action_screen3_to_screen2"
+            app:destination="@id/screen2Fragment"
+            app:popUpTo="@id/screen2Fragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+</navigation>

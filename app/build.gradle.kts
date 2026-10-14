@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.navigation.safeargs)
 }
 
 android {
@@ -39,4 +40,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.espresso.core)
     androidTestImplementation(libs.ext.junit)
+    implementation(libs.navigation.fragment)
+    implementation(libs.navigation.ui.ktx)
 }
