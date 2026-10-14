@@ -41,7 +41,7 @@ public class Screen3Fragment extends Fragment {
             for (CheckBox cb : checkBoxes) {
                 if (cb.isChecked()) data.selectedSection.add(cb.getText().toString());
             }
-            Navigation.findNavController(view).navigate(R.id.action_screen3_to_screen2);
+            Navigation.findNavController(requireView()).popBackStack();
         });
         return view;
     }

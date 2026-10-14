@@ -62,7 +62,7 @@ public class Screen2Fragment extends Fragment {
         row.setPadding(0, 12, 0, 12);
         TextView tvLabel = new TextView(requireContext());
         tvLabel.setText(label + ": ");
-        tvLabel.setWidth(90);
+        tvLabel.setWidth(200);
         row.addView(tvLabel);
         TextView tvValue = new TextView(requireContext());
         tvValue.setText(value == null || value.isEmpty() ? "—" : value);
